@@ -1,0 +1,158 @@
+$main:#4CA3FF ;
+$line: #DFF2FF;
+$links: #98AAB7;
+nav {
+    transform: translateY();
+    transition: 0.5s ease-out;  
+    * {
+        text-decoration: none;
+        transition: 0.2s ease-out;
+    }
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background: white;
+    .alert {
+        height: 74px;
+        background: $main;
+        display: grid;
+        place-items: center;
+        color: white;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 100px;
+        height: 100px;
+        span {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            a {
+                color: $links;
+                font-weight: 600;
+            }
+            .special {
+                background-color: $main;
+                color: white;
+                padding: 18px 22px;
+                border-radius: 100px;
+            }
+        }
+    }
+    border-bottom: 1px solid $line;
+}
+.special {
+    // background-color: $main;
+    color: white;
+    padding: 18px 52px;
+    border-radius: 100px;
+    text-decoration: none;
+}
+.home {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+    gap: 164px;
+    .hero {
+        height:  calc(100vh - 20px);
+        width: 100%;
+        display: flex;
+        position: relative;
+        padding: 10px;
+        .videoCont {
+            padding: 0 18px;
+            width: 100%;
+            background-color: blue;
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            place-items: center;
+            border-radius: 44px;
+            video {
+                height: 120%;
+                width: 120%;
+            }
+        }
+        .heroInfo {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            padding: 0 50px;
+            height: max-content;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 44px;
+            h1 {
+                font-size: 152px;
+            }
+             p {
+                display: flex; align-items: center;
+                gap: 12px;
+                font-weight: 600;
+                font-size: 18px;
+             }
+            .mainInfo {
+                display: flex;
+                justify-content: space-between;
+                padding: 0 12px;
+                height: 300px;
+                align-items: center;
+                border-top: 1px solid black;
+                .heroLink {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 48px;
+                    height:max-content;
+                    h2 {
+                        font-size: 32px;
+                        max-width: 500px;
+                    }
+                    .links {
+                        display: flex;
+                        gap: 28px;
+                    }
+
+                    .special:first-child {
+                        background-color: black;
+                        color: white;
+
+                    }
+                    .special  {
+                        outline: black 1px solid;
+                        color: black;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .header {
+        font-size: 64px;
+        align-self: center;
+        max-width: 1200px;
+        font-weight: 700;
+        text-align: left;
+    }
+}
+
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
