@@ -1,6 +1,7 @@
 $main:#4CA3FF ;
 $line: #DFF2FF;
 $links: #98AAB7;
+$accent: #011829;
 nav {
     transform: translateY();
     transition: 0.5s ease-out;  
@@ -138,21 +139,87 @@ nav {
 
     .header {
         font-size: 64px;
-        align-self: center;
-        max-width: 1200px;
-        font-weight: 700;
+        padding: 0 72px;
+        // max-width: 1200px;
+        font-weight: bolder;
         text-align: left;
     }
+
+    .community {
+        display: flex;
+        padding: 10px 72px;
+        gap: 10px;
+        .communityInfo {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            gap: 20px;
+        }
+        .card {
+            display: flex;
+            align-items: center;
+            height: 280px;
+            width: 100%;
+            border-radius: 12px;
+            padding: 0 20px;
+            gap: 20px;
+            outline: 1px solid $line;
+            img {
+                height: 96px;
+                margin-bottom: 20%;
+
+            }
+            a {
+                color: $main;
+                font-size: 34px;
+                text-decoration: none;
+                font-weight: 600;
+            }
+            p {
+                // color: white;
+                font-size: 18px;
+                font-weight: 600;
+            }
+            .cardInfo {
+                display: flex;
+                flex-direction: column;
+                gap: 60px;
+            }
+        }
+        .card:first-child {
+            background-color: $accent;
+            color: white;
+        }
+
+        .iFrame {
+            width: 50%;
+            height: auto;
+            padding: 0;
+            overflow: hidden;
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            video {
+                width: 100%;
+                height: 100%;
+            }
+            .iFrameInfo {
+                position: absolute;
+                width: max-content;
+                color: white;
+                font-size: 44px;
+                font-weight: 600;
+                text-shadow: 0px 0px 10px black;
+                bottom: 64px;
+                left: 64px;
+                line-height: 1;
+            }
+        }
+    }
+
 }
 
 
-.flex_column {
-    display: flex;
-    flex-direction: column;
-}
 
-.flex_center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
