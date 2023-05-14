@@ -4,6 +4,8 @@ import Community from '../components/Community'
 import Product from '../components/Product'
 import GetStarted from '../components/GetStarted'
 import Contacts from '../components/Contacts'
+import VideoLinks from '../components/VideoLinks'
+import Newsletter from '../components/Newsletter'
 
 function Home() {
   return (
@@ -17,6 +19,8 @@ function Home() {
       <Product/>
       <GetStarted/>
       <Contacts/>
+      <VideoLinks/>
+      <Newsletter/>
     </div>
   )
 }
