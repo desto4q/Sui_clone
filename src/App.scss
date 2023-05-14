@@ -71,15 +71,18 @@ nav {
         .videoCont {
             padding: 0 18px;
             width: 100%;
-            background-color: blue;
             position: relative;
             overflow: hidden;
-            display: grid;
-            place-items: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-radius: 44px;
+            // aspect-ratio: 16/9;
             video {
                 height: 120%;
                 width: 120%;
+                object-fit: cover;
+                background-color: RED;
             }
         }
         .heroInfo {
@@ -167,7 +170,6 @@ nav {
             img {
                 height: 96px;
                 margin-bottom: 20%;
-
             }
             a {
                 color: $main;
@@ -193,28 +195,28 @@ nav {
 
         .iFrame {
             width: 50%;
-            height: auto;
             padding: 0;
             overflow: hidden;
             border-radius: 32px;
+            background-color: red;
             display: flex;
-            align-items: center;
-            justify-content: center;
             position: relative;
             video {
                 width: 100%;
                 height: 100%;
+                object-fit: cover;
             }
             .iFrameInfo {
                 position: absolute;
                 width: max-content;
                 color: white;
-                font-size: 44px;
+                font-size: 38px;
                 font-weight: 600;
-                text-shadow: 0px 0px 10px black;
-                bottom: 64px;
-                left: 64px;
+                text-shadow: 0px 0px 5px black;
+                bottom: 0;
+                left: 0;
                 line-height: 1;
+                transform: translateX(20px) translateY(-28px);
             }
         }
     }
@@ -247,8 +249,8 @@ nav {
         // width: max-content;
         // align-self: center;
         .pcard  {
-            height: 400px;
             width: 100%;
+            aspect-ratio: 9.5/10;
             outline: 1px solid $links;
             border-radius: 8px;
             display: flex;
@@ -256,6 +258,7 @@ nav {
             padding: 10px 24px;
             justify-content: space-evenly;
             position: relative;
+            min-width: 320px;
             .iconCont {
                 flex: 0.6;
                 img {
@@ -279,7 +282,273 @@ nav {
             }
         }
     }
+
+    .getStarted {
+        margin: 0 12px;
+        display: flex;
+        flex-direction: column;
+        background-color: $accent;
+        border-radius: 44px;
+        .videoCont {
+            width: 100%;
+            background-color: blue;
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            place-items: center;
+            border-radius: 44px;
+            aspect-ratio: 16/5;
+            video {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .getStartedInfo {
+        width: 100%;
+        aspect-ratio: 16/5;
+        display: flex;
+        align-items: center;
+        padding: 0 72px;
+        gap: 10px;
+        justify-content: space-between;
+        h1 {
+            color: white;
+            font-size: 72px;
+            width: 50%;
+        }
+        .content {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            max-width: 600px;
+            p {
+                color: white;
+            }
+            .special {
+                outline: 1px solid white;
+                width: max-content;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 14px 32px;
+            }
+        }
+    }
+
+    .contacts {
+        height: 700px;
+        border-radius: 12px ;
+        outline: 1px solid $links   ;
+        margin: 0 12px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 44px;
+        justify-content: center;
+        gap: 40px;
+        .special {
+            background-color: $main;
+            width: max-content;
+        }
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 50%;
+            .paragraph {
+                font-weight: 600;
+                font-size: 24px;
+            }
+            .contactsInfo {
+                display: flex;
+                flex-direction: column;
+                gap: 22px;
+                max-width: 400px;
+                h1 {
+                    font-size: 52px;
+                    font-weight: 600;
+                }
+            }
+            .paragraph {
+                max-width: 500px;
+            }
+
+           
+        }
+
+         .bottom {
+                border-top: 1px solid $links;
+                display: flex;
+                gap: 20px;
+                padding-top: 40px;
+                align-items: center;
+                
+                .cCard {
+                    display: flex;
+                    flex-direction: column;
+                    height: max-content;
+                    width: 400px;
+                    gap: 24px;
+                    h2 {
+                        font-weight: 700;
+                    }
+                    p {
+                        
+                        font-weight: 600;
+                    }
+                    
+                }
+            }
+    }
 }
 
 
 
+
+
+@media screen and (max-width: 1000px ) {
+    .home {
+        gap: 24px !important;
+    }
+    nav {
+        .container {
+            padding: 0  24px!important;
+            span {
+                span {
+                    background-color: red;
+                    display: none;
+                }
+            }
+            .special {
+                font-size: 12px;
+                padding: 12px 16px !important;
+            }
+        }
+       
+    }
+    .hero {
+        padding: 0 !important;
+        .videoCont {
+            border-radius: 0 !important;
+        }
+        .heroInfo {
+            h1 {
+                font-size: 44px !important ;
+                word-spacing: 100vw;
+            }
+            .mainInfo {
+                flex-direction: column-reverse;
+                align-items: flex-start !important;
+                padding: 10px 0 !important;
+                gap: 20px !important;
+                justify-content: flex-start !important;
+                height: 100% !important;
+                .links {
+                    flex-direction: column;
+                    .special {
+                        width: fit-content;
+                    }
+                }
+            }
+        }
+    }
+    .community {
+        all:  unset;
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px !important;
+        .communityInfo {
+            width: 100% !important;
+            align-items: center;
+            .card {
+                height: fit-content !important;
+                max-width: 600px;
+                flex-direction: column;
+                gap: 12px !important;
+                padding: 10px 12px !important;
+                 img {
+                    margin-bottom: 0 !important;
+                 }
+                .cardInfo {
+                    p {
+                        font-size: 16px !important;
+                        font-weight: 500 !important ;
+                    }
+                    a {
+                        font-size: 20px;
+                        text-decoration: und;
+                    }
+                    gap: 8px !important;
+                }
+            }
+        }
+        .iFrame {
+            width: 100% !important;
+            
+        }
+    }
+    .product {
+       .typewriter {
+        font-size: 3em !important;
+       } 
+       .cards {
+        flex-direction: column;
+        .pcard {
+            width: auto;
+            max-height: 400px;
+        }
+       }
+    }
+    .header {
+        font-size: 24px !important;
+        padding: 24px !important;
+        
+    }
+    .getStarted {
+        
+        .videoCont {
+            aspect-ratio: none !important;
+            height: 240px !important;
+        }
+        .getStartedInfo {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            justify-content: center !important;
+            padding: 20px 10px !important;
+            aspect-ratio: none !important;
+
+             h1 {
+                font-size: 32px !important;
+                width: 100%;
+             }
+            .content {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .product {
+        .typewriter {
+            flex-direction: column;
+        }
+
+
+    }
+    .product {
+        padding: 0  12px !important;
+
+   }
+   .getStarted {
+    border-radius: 12px !important;
+    .videoCont {
+        border-radius: 12px !important;
+    }
+   }
+}

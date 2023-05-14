@@ -33,9 +33,11 @@ function Nav() {
                 <img src="https://assets-global.website-files.com/6425f546844727ce5fb9e5ab/6439ab96e20cad137a4c80d0_TopNavLogo.svg" alt="" />
             </span>
             <span>
-                <Link to={"/"}>Build</Link>
-                <Link to={"/"}>Learn</Link>
-                <Link to={"/"}>Connect</Link>
+                <span >
+                    <Link to={"/"}>Build</Link>
+                    <Link to={"/"}>Learn</Link>
+                    <Link to={"/"}>Connect</Link>
+                </span>
                 <Link className='special' to={"/"}>Start Building</Link> 
 
             </span>

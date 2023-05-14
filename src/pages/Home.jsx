@@ -2,6 +2,8 @@ import React from 'react'
 import Hero from '../components/Hero'
 import Community from '../components/Community'
 import Product from '../components/Product'
+import GetStarted from '../components/GetStarted'
+import Contacts from '../components/Contacts'
 
 function Home() {
   return (
@@ -13,6 +15,8 @@ function Home() {
       </div>
       <Community/>
       <Product/>
+      <GetStarted/>
+      <Contacts/>
     </div>
   )
 }

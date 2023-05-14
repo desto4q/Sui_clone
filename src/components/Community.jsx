@@ -25,7 +25,7 @@ function Community() {
         </div>
         <div className='iFrame'>
             <video autoPlay muted loop>
-              <source src='https://assets-global.website-files.com/6425f546844727ce5fb9e5ab/643652b4ec653a05c178a0c2_-2393330798549273605homepage_community-transcode.mp4'/>
+              <source  src='https://assets-global.website-files.com/6425f546844727ce5fb9e5ab/643652b4ec653a05c178a0c2_-2393330798549273605homepage_community-transcode.mp4'/>
             </video>
             <div className="iFrameInfo">
               Meet the Sui<br></br>
