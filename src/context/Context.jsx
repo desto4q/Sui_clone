@@ -8,9 +8,13 @@ export let Contextprovider = ({children}) => {
 
 
     let [screen,setScreem] = useState("wide")
+    let [ham,setHam] = useState(false)
     let screenObserver = e => {
         if (window.innerWidth > 1000) {
-            // console.log("yes")
+            setScreem("wide")
+        }
+        else {
+            setScreem("small")
         }
     }
     useEffect(()=>{
@@ -25,8 +29,9 @@ export let Contextprovider = ({children}) => {
         })  
         }
     },[])
-
-    let values = {}
+    useEffect(()=>{
+    },[ham])
+    let values = {ham,setHam,screen}
     return (
         <userContext.Provider value={values}>
             {children}

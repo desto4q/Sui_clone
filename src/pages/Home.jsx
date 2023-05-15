@@ -6,6 +6,7 @@ import GetStarted from '../components/GetStarted'
 import Contacts from '../components/Contacts'
 import VideoLinks from '../components/VideoLinks'
 import Newsletter from '../components/Newsletter'
+import Build from '../components/Build'
 
 function Home() {
   return (
@@ -21,6 +22,7 @@ function Home() {
       <Contacts/>
       <VideoLinks/>
       <Newsletter/>
+      <Build/>
     </div>
   )
 }

@@ -10,7 +10,7 @@ function Newsletter() {
             <p>Get news, updates, and insights</p>
             <div className="input">
                 <label htmlFor="input">Email</label>
-                <input type="text" name='input' />
+                <input type="email" name='input' />
             </div>
             <div className="checkbox">
                 <input type="checkbox" name="terms" id="" />

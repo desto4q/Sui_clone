@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import Hamburger from './Hamburger'
+import { userContext } from '../context/Context'
 
 function Nav() {
 
     let [transform,setTransform] = useState(0)
+    let {ham,screen,setHam} = useContext(userContext)
 
     useEffect(()=>{
         let Prev = scrollY
@@ -11,14 +14,12 @@ function Nav() {
         document.onscroll = (e) => {
             if ((scrollY > Prev)) {
                 Prev = scrollY
-                console.log("down")
                 setTransform(120)
-                console.log(transform)
+                setHam(false)
             }
             if ( scrollY < Prev) {
                 Prev = scrollY
                 setTransform(0)
-                console.log(transform)
             }
         }
     },[])
@@ -38,10 +39,19 @@ function Nav() {
                     <Link to={"/"}>Learn</Link>
                     <Link to={"/"}>Connect</Link>
                 </span>
-                <Link className='special' to={"/"}>Start Building</Link> 
+                <Link className='special' to={"/"}>Start    Building
+                </Link> 
+                {screen == "wide" ? null : <Hamburger/>}
 
             </span>
+
+            
         </div>
+        {ham == true  ?  <div className="hammenu">
+            <Link to={"/"}>Build</Link>
+            <Link to={"/"}>Learn</Link>
+            <Link to={"/"}>Connect</Link>
+        </div> : null}
     </nav>
   )
 }
